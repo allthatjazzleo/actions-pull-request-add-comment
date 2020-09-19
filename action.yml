@@ -1,0 +1,18 @@
+name: 'Pull Request Add Comment'
+branding:
+  icon: 'message-square'  
+  color: 'green'
+description: 'Comments a pull request with the provided message, which can be triggered by issue_comment or pull_request'
+inputs: 
+  message:
+    description: 'Message that should be printed in the pull request'
+    required: true
+  GITHUB_TOKEN:
+    description: 'Github token of the repository (automatically created by Github)'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.message }}
+    - ${{ inputs.GITHUB_TOKEN }}
