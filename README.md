@@ -28,10 +28,8 @@ jobs:
 
 See examples in [opened PR](https://github.com/allthatjazzleo/actions-pull-request-add-comment/pulls) !
 
-:information_source: : Make sure to listen to `pull_request` events. 
+:information_source: : Make sure to listen to `pull_request` or `issue_comment` events. 
 Otherwise, it will not be able to comment the PR and you'll have an error. 
-
-## Contributing
 
 ### Build 
 
