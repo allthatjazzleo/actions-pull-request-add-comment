@@ -32,7 +32,7 @@ jobs:
           github.actor == 'allthatjazzleo' )
         with:
           message: 'yoyo🤙🏻'
-          # message: "check [here](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})' dynamic message
+          # message: "echo ${{ github.event.comment.body }})' dynamic message
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
 
