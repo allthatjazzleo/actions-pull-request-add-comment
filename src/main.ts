@@ -7,7 +7,7 @@ async function run() {
     const github_token = core.getInput('GITHUB_TOKEN');
 
     const context = github.context;
-    if (context.payload.pull_request == null && context.payload.comment == null) {
+    if (context.payload.pull_request == null && context.payload.issue == null) {
         core.setFailed('No pull request or issue comment found.');
         return;
     }
@@ -15,10 +15,8 @@ async function run() {
     if (context.payload.pull_request != null) {
       issue_number = context.payload.pull_request.number;
     }
-    if (context.payload.comment != null) {
-      let issue_url = context.payload.comment.html_url;
-      issue_url = issue_url.split('#').pop().split('?').pop();
-      issue_number = issue_url.substring(issue_url.lastIndexOf('/') + 1);
+    if (context.payload.issue != null) {
+      issue_number = context.payload.issue.number;
     }
 
     const octokit = github.getOctokit(github_token);
@@ -30,6 +28,7 @@ async function run() {
 
   } catch (error) {
     core.setFailed(error.message);
+    return;
   }
 }
 
