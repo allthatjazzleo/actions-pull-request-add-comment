@@ -32,7 +32,7 @@ jobs:
           && github.event.comment.body == '/hi' && github.actor == 'allthatjazzleo' )
         with:
           message: 'yoyo🤙🏻'
-          # message: "echo ${{ github.event.comment.body }})' dynamic message
+          # message: "echo ${{ github.event.comment.body }}' dynamic message
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
 
