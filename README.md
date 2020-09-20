@@ -9,7 +9,7 @@ You can even put dynamic data thanks to [Contexts and expression syntax](https:/
 
 ## Usage
 
-```
+```yaml
 name: Example
 
 on: 
