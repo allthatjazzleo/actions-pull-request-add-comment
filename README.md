@@ -28,8 +28,8 @@ jobs:
       - name: Comment PR
         uses: allthatjazzleo/actions-pull-request-add-comment@master
         if: >-
-          github.event_name == 'pull_request' || (github.event_name == 'issue_comment' && github.event.comment.body == '/hi' && 
-          github.actor == 'allthatjazzleo' )
+          github.event_name == 'pull_request' || (github.event_name == 'issue_comment' 
+          && github.event.comment.body == '/hi' && github.actor == 'allthatjazzleo' )
         with:
           message: 'yoyo🤙🏻'
           # message: "echo ${{ github.event.comment.body }})' dynamic message
