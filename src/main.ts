@@ -22,7 +22,6 @@ async function run() {
     }
 
     const octokit = github.getOctokit(github_token);
-    const asd = issue_number
     await octokit.issues.createComment({
         ...context.repo,
         issue_number: issue_number as number,
