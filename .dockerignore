@@ -1,0 +1,7 @@
+Dockerfile
+**/*.md
+img
+tsconfig.json
+src
+action.yml
+LICENSE
